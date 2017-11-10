@@ -1,0 +1,36 @@
+<grid
+    childrenField='children'
+    enableDynamicLevels='true'
+    enableExport='false'
+    enableMultiColumnSort='false'
+    enablePaging='false'
+    enablePdf='false'
+    enablePreferencePersistence='false'
+    enablePrint='false'
+    enableFooters='false'
+    selectionMode='singleRow'
+    itemClick='treeColumns_clickHandler'
+    >
+    <level
+        enableFilters='true'
+        childrenField='children'
+        >
+        <columns>
+            <column
+                headerText='Column Name'
+                id='colName'
+                dataField='name'
+                filterControl='TextInput'
+                filterOperation='BeginsWith'
+                filterWaterMark='Search'
+                enableRecursiveSearch='true'
+                 />
+            <column
+                headerText='Visible'
+                dataField='selected'
+                itemRenderer='com.flexicious.screens.SettingsCheckBoxRenderer'
+                width='50' />
+           </columns>
+    </level>
+
+</grid>
